@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  thedevops:
+    image: ${DOCKER_REGISTRY-}thedevops
+    build:
+      context: .
+      dockerfile: TheDevops/Dockerfile
+    container_name: devops-container
+    ports: 
+      - "8001:80"
